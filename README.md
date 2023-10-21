@@ -19,3 +19,5 @@ Link to the Series:
 7. Date Object
 
 ### Basics - Part 2
+1. Arrays
+2. Arrays Part 2
