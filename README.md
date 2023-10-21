@@ -9,8 +9,13 @@ Link to the Series:
 (_*This list will get updated as we progress through the playlist._)
 
 ## Table of Contents
+### Basics - Part 1
 1. Variables
 2. Datatypes
 3. Conversion Operation
 4. Comparison
 5. Strings
+6. Math and Number
+7. Date Object
+
+### Basics - Part 2
