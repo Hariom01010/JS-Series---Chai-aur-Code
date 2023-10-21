@@ -20,4 +20,4 @@ Link to the Series:
 
 ### Basics - Part 2
 1. Arrays
-2. Arrays Part 2
+2. Arrays Part 2 
