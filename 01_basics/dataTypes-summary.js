@@ -38,6 +38,33 @@ const myFunction = function(){
     console.log("Hello World")
 }
 
-console.log(typeof heros)
-console.log(typeof myObj)
-console.log(typeof myFunction) // returns function function object to be precise
+// console.log(typeof heros)
+// console.log(typeof myObj)
+// console.log(typeof myFunction) // returns function function object to be precise
+
+
+
+// ***************************************************************************************************************************
+
+// Types of Memory: Stack (Primitive Datatype), Heap (Non-Primitive Datatype) 
+// Stack: You are given a copy of the original value
+// Heap: You are given a reference to the original value
+
+let myYoutube = "noahFactCorner"
+
+let anotherName = myYoutube
+anotherName = "codeWithHariom"
+
+// console.log(myYoutube)
+// console.log(anotherName)
+
+let userOne = {
+    email: "rishi@gmail.com",
+    upi: "upi@ybl"
+}
+
+let userTwo = userOne
+userTwo.email = "hariom@gmail.com"
+
+console.log(userOne.email)
+console.log(userTwo.email)
