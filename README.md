@@ -10,3 +10,4 @@ A github repo for the practice of Javascript Series on the Youtube Channel Chai 
 2. Datatypes
 3. Conversion Operation
 4. Comparison
+5. Strings
