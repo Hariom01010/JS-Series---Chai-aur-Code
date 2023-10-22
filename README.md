@@ -27,3 +27,10 @@ Link to the Series:
 ### Basics - Part 3
 1. Functions
 2. Scope in JS
+3. Arrow Function
+4. IIFE
+
+### Control FLow
+1. If Else
+2. Switch
+3. Truthy Falsy
