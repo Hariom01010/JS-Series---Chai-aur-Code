@@ -1,4 +1,4 @@
-# JS-Series---Chai-aur-Code
+# JS-Series: Chai-aur-Code
 A github repo for the practice of Javascript Series on the Youtube Channel Chai and Code
 
 Link to the Series:
@@ -23,3 +23,7 @@ Link to the Series:
 2. Arrays Part 2 
 3. Objects
 4. Objects Part 2
+
+### Basics - Part 3
+1. Functions
+2. Scope in JS
