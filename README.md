@@ -34,3 +34,11 @@ Link to the Series:
 1. If Else
 2. Switch
 3. Truthy Falsy
+
+### Iterators
+1. For Loop
+2. While Loop
+3. Higher Order Array Loops
+4. Map
+5. Filter
+6. Reduce
