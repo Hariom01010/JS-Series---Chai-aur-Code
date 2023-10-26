@@ -42,3 +42,9 @@ Link to the Series:
 4. Map
 5. Filter
 6. Reduce
+
+### DOM Manipualtion
+1. Nodelist Collection
+2. Parent Child 
+3. Add Elements in DOM
+4. Edit/Remove Elements in DOM
