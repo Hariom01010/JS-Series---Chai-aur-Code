@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: white;
+        }
+        table,th,td{
+            border: solid 1px white;
+            padding: 12px
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Value</th>
+            <th>Sent</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>UNSENT</td>
+            <td>Client has been created. open() not called yet.</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>OPENED</td>
+            <td>open() has been called.</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>HEADERS_RECEIVED</td>
+            <td>send() has been called, and headers and status are available.</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>LOADING</td>
+            <td>Downloading; responseText holds partial data.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>DONE</td>
+            <td>The operation is complete.</td>
+        </tr>
+    </table>
+</body>
+<script>
+    const apiURl = "https://api.github.com/users/hariom01010"
+    const request = new XMLHttpRequest()
+    request.open("GET", apiURl)
+
+    request.onreadystatechange = ()=>{
+        console.log(request.readyState)
+        if(request.readyState === 4){
+            const response = request.responseText
+            console.log(response)
+        }
+    }
+    request.send()
+</script>
+</html>

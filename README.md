@@ -48,3 +48,11 @@ Link to the Series:
 2. Parent Child 
 3. Add Elements in DOM
 4. Edit/Remove Elements in DOM
+
+### Projects
+This JS series contain 6 mini projects which can be accessed by the link provided in 07_projects/projects.md
+
+### Events
+1. Events
+2. setTimeOut
+3. setInterval

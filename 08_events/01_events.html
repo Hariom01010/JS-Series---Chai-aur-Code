@@ -7,7 +7,7 @@
 </head>
 <body style="background-color: #212121; color: aliceblue;">
     <h2>Amazing Image</h2>
-    <ul>
+    <ul id="images">
         <li><img width="200px" src="https://images.unsplash.com/photo-1697525930011-0cc03edfbb3d?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="night-light" id="night-light"></li>
         <li><img width="200px" src="https://images.unsplash.com/photo-1697541283989-bbefb5982de9?auto=format&fit=crop&q=80&w=2127&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="halloween" id="halloween"></li>
         <li><img width="200px" src="https://images.unsplash.com/photo-1682687982298-c7514a167088?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="scuba-diving" id="scuba-diving"></li>
@@ -19,14 +19,32 @@
     // document.getElementById("mountain").onclick = function(){
     //     alert("Mountain")
     // }
-
-    document.getElementById("mountain").addEventListener("click", (e)=>{
-        // alert("mountain clicked")
-        console.log(e)
+    document.getElementById("images").addEventListener("click", ()=>{
+        // console.log("Click inside the ul")
     }, false)
+    document.getElementById("mountain").addEventListener("click", (e)=>{
+        // e.stopPropagation()
+        // alert("mountain clicked")
+        // console.log(e)
+        // console.log("MOUNTAIN Clicked")
+    }, false)
+
+    document.getElementById("google").addEventListener("click",(e)=>{
+        e.preventDefault()
+        e.stopPropagation()
+        // console.log("Clicked Google")
+    })
 
     // Read these from event object: type, timestamps, defaultPrevented, target, toElement, srcElement, currentTarget, clientX, clientY, screenX, screenY
     //                               altkey, ctrlkey, shiftkey, keyCode
-                                
+                
+    document.querySelector("#images").addEventListener("click", (e)=>{
+        console.log(e.target.tagName)
+        if(e.target.tagName === "IMG"){
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+        // removeIt.parentNode.removeChild(removeIt)
+    })
 </script>
 </html>
