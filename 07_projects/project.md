@@ -130,3 +130,54 @@ form.addEventListener('submit', (e) => {
 
 
 ```
+
+### Project 5: Keyboard Check ⌨
+A project which shows what key was pressed by the user.
+
+JS Code:
+```javascript
+const insertDiv = document.getElementById('insert');
+const key = document.getElementsByClassName('insertKey');
+
+window.addEventListener('keydown', (e) => {
+  key[0].innerHTML = `<td style="border: 1px solid white; margin: 12px; padding: 6px 12px">${e.code}</td><td>${e.keyCode}</td>`;
+});
+
+```
+
+
+### Project 6: Unlimited Color 🧠
+A simple project where background changes after every second when you click the button.
+
+JS Code:
+```javascript
+const start = document.querySelector('#start');
+const stop = document.querySelector('#stop');
+let intervalId;
+
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+const changeColor = function () {
+  if (!intervalId) {
+    intervalId = setInterval(() => {
+      document.body.style.backgroundColor = randomColor();
+    }, 1000);
+  }
+};
+
+const stopChangeColor = function () {
+  clearInterval(intervalId);
+  intervalId = null;
+};
+
+start.addEventListener('click', changeColor);
+stop.addEventListener('click', stopChangeColor);
+
+```

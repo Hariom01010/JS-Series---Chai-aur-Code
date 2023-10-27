@@ -56,3 +56,6 @@ This JS series contain 6 mini projects which can be accessed by the link provide
 1. Events
 2. setTimeOut
 3. setInterval
+
+### Advance - Part One
+1. Api Request - XMLHttpRequest

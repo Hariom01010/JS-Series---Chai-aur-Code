@@ -1,20 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        body {
             background-color: #212121;
             color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
         }
-        table,th,td{
+
+        table,
+        th,
+        td {
             border: solid 1px white;
-            padding: 12px
+            padding: 12px;
+        }
+
+        .getBtn{
+            background-color: rgb(77, 110, 180);
+            border-radius: 12px;
+            margin: 12px;
+            border: 0px;
+            color: white;
+            padding: 12px;
+            cursor: pointer;
+        }
+
+        #cardImg{
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+
+        .card{
+            display: none;
+            border: 1px solid white;
+            margin: 0px 30rem;
+            padding: 12px;
+            border-radius: 12px;
         }
     </style>
 </head>
+
 <body>
     <table>
         <tr>
@@ -48,19 +79,49 @@
             <td>The operation is complete.</td>
         </tr>
     </table>
-</body>
-<script>
-    const apiURl = "https://api.github.com/users/hariom01010"
-    const request = new XMLHttpRequest()
-    request.open("GET", apiURl)
 
-    request.onreadystatechange = ()=>{
-        console.log(request.readyState)
-        if(request.readyState === 4){
-            const response = request.responseText
-            console.log(response)
+    <button onclick="getCard()" class="getBtn">Get Card</button>
+
+    <div class="card">
+        <img src="" alt="" id="cardImg"/>
+        <h3 class="cardName"></h3>
+        <p class="cardDesc"></p>
+    </div>
+
+</body>
+
+<script>
+    function getCard() {
+        const apiURl = "https://api.github.com/users/hariom01010"
+        const request = new XMLHttpRequest()
+
+        const card = document.querySelector(".card")
+        const cardImg = document.querySelector("#cardImg")
+        const cardName = document.querySelector(".cardName")
+        const cardDesc = document.querySelector(".cardDesc")
+        const btn = document.querySelector(".getBtn")
+
+        request.open("GET", apiURl)
+    
+        request.onreadystatechange = function () {
+            console.log(request.readyState)
+            if (request.readyState === 4) {
+                const response = this.responseText
+                const responseJSON = JSON.parse(response)
+                console.log(responseJSON)
+
+
+                btn.setAttribute("disabled", "true")
+                btn.style.cursor = "auto"
+                card.style.display = "block"
+                cardImg.setAttribute("src", responseJSON.avatar_url)
+                cardName.textContent = `${responseJSON.name}`
+                cardDesc.textContent = `${responseJSON.bio}`
+            }
         }
+        request.send()
     }
-    request.send()
+
 </script>
+
 </html>
