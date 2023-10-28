@@ -65,3 +65,9 @@ This JS series contain 6 mini projects which can be accessed by the link provide
 1. OOP
 2. Object
 3. Prototype
+4. Call
+5. Classes
+6. Inheritance
+7. Static Keyword
+8. Bind
+9. Objects in Depth
