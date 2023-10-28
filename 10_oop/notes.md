@@ -1,7 +1,5 @@
 # JavaScript and Classes
 
-## OOP 
-
 ### Object
 - Collection of Properties and Methods
 

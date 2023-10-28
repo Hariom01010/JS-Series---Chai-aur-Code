@@ -10,6 +10,8 @@ const user = {
     }
 }
 
+// console.log(this)
+
 function User(userName, loginCount, isLoggedIn){
     this.userName = userName
     this.loginCount = loginCount
@@ -27,4 +29,4 @@ const userTwo = new User("vashista", 11, false)
 
 // console.log(user.userName)
 console.log(userOne.constructor)
-console.log(userTwo)
+// console.log(userTwo)

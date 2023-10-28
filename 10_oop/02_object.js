@@ -4,9 +4,9 @@ function multiplyby5(num){
 
 multiplyby5.power = 2
 
-console.log(multiplyby5(5))
-console.log(multiplyby5.power)
-console.log(multiplyby5.prototype)
+// console.log(multiplyby5(5))
+// console.log(multiplyby5.power)
+// console.log(multiplyby5.prototype)
 
 
 function createUser(username, score){
@@ -24,6 +24,7 @@ createUser.prototype.printMe = function(){
 
 const chai = new createUser("chai", 25)
 const tea = createUser("tea", 250)
+
 
 chai.printMe()
 
