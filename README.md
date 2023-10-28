@@ -59,3 +59,9 @@ This JS series contain 6 mini projects which can be accessed by the link provide
 
 ### Advance - Part One
 1. Api Request - XMLHttpRequest
+2. Promises and Fetch
+
+### Object Oriented Programming
+1. OOP
+2. Object
+3. Prototype
